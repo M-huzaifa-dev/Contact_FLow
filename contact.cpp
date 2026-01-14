@@ -111,8 +111,7 @@ int main()
     const int MAX = 100;
 
     people person[MAX];
-    int currCount = loaddata(person, MAX); // Start mein file se data load kiya
-
+    int currCount = loaddata(person, MAX); 
     int choice;
     do
     {
@@ -128,7 +127,7 @@ int main()
         switch (choice)
         {
         case 1:
-            // Add contact logic
+            
             if (currCount < MAX)
             {
                 cout << "Enter name: ";
@@ -137,9 +136,9 @@ int main()
                 getline(cin, person[currCount].number);
                 currCount++;
 
-                // Saath hi sort aur save bhi kar dein
+                
                 sortcontacts(person, currCount);
-                // Yahan save wala loop chala dein
+                
                 cout << "Contact added!" << endl;
                 saveContacts(person, currCount);
             }
@@ -172,4 +171,5 @@ int main()
     } while (choice != 4);
 
     return 0;
+
 }
